@@ -1,0 +1,9 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  workload:
+    handler: ./node-service
+    image: docker.io/alexellis2/node-service-watchdog:0.1.0
+    lang: dockerfile
