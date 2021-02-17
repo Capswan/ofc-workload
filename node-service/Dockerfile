@@ -6,7 +6,7 @@ FROM alexellis2/service:0.3.6
 
 # Let's say that the image listens on port 3000 and 
 # that we can't change that easily
-ENV http_port 8080
+ENV http_port 3000
 
 # Install the watchdog from the base image
 COPY --from=watchdog /fwatchdog /usr/bin/
@@ -16,7 +16,7 @@ COPY --from=watchdog /fwatchdog /usr/bin/
 # where your HTTP server will be running from the original
 # image.
 ENV mode="http"
-ENV upstream_url="http://127.0.0.1:8080"
+ENV upstream_url="http://127.0.0.1:3000"
 
 # Set fprocess to the value you have in your base image
 ENV fprocess="node index.js"

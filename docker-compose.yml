@@ -5,7 +5,7 @@ services:
     build:
       context: ./node-service
     ports:
-      - 8003:8080
+      - 8003:3000
     environment:
       fprocess: nodemon index.js
     volumes:
