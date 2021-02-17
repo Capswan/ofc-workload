@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  workload:
+    build:
+      context: ./node-service
+    ports:
+      - 8003:3000
+    environment:
+      fprocess: nodemon index.js
+    volumes:
+      - ./node-service:/home/app/function
+    user: root
+    command: sh -c "npm i -g nodemon && fwatchdog"
