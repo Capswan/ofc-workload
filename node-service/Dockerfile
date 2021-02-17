@@ -16,7 +16,7 @@ COPY --from=watchdog /fwatchdog /usr/bin/
 # where your HTTP server will be running from the original
 # image.
 ENV mode="http"
-ENV upstream_url="http://127.0.0.1:3000"
+ENV upstream_url="http://127.0.0.1:8080"
 
 # Set fprocess to the value you have in your base image
 ENV fprocess="node index.js"
