@@ -6,7 +6,7 @@ FROM alexellis2/service:0.3.6
 
 # Let's say that the image listens on port 3000 and 
 # that we can't change that easily
-ENV http_port 3030
+ENV http_port 8080
 
 # Install the watchdog from the base image
 COPY --from=watchdog /fwatchdog /usr/bin/
